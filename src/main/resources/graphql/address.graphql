@@ -1,0 +1,16 @@
+type Address{
+    type: String
+    city: String
+    country: String
+    mobile: String
+    zip: String
+    employee: Employee
+}
+
+input AddressInput{
+    type: String
+    city: String
+    country: String
+    mobile: String
+    zip: String
+}
