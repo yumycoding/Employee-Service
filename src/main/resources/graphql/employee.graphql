@@ -1,0 +1,21 @@
+type Employee{
+    id: ID
+    firstName: String
+    lastName: String
+    userName: String
+    email: String
+    addresses: [Address]
+    department: String
+    role: String
+}
+
+
+input EmployeeInput {
+    firstName: String @Size(min:3 ,max: 15)
+    lastName: String
+    userName: String
+    email: String
+    department: String
+    role: String
+    addresses: [AddressInput]
+}
