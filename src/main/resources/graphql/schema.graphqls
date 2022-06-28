@@ -1,30 +1,15 @@
 type Query{
     employees : [Employee]
     employeeById(id: ID) : Employee
-    employeeByEmail(email: String) : Employee
+    employeeByEmail(email: String) : Boolean!
+    departments: [Department]
 }
 
-type Employee{
-    id: ID
-    firstName: String
-    lastName: String
-    userName: String
-    email: String
-    addresses: [Address]
-    department: String
-    role: String
+type Mutation{
+    departmentCreate(name: String): Department
+    employeeCreate(employeeInput: EmployeeInput) : Employee
+    employeeUpdate(employeeInput: EmployeeInput) : Employee
 }
 
-type Address{
-    type: String
-    city: String
-    country: String
-    mobile: String
-    zip: String
-    employee: Employee
-}
 
-type Department{
-    name: String
-    employee: String
-}
+
