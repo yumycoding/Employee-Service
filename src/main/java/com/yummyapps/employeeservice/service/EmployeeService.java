@@ -68,12 +68,16 @@ public class EmployeeService {
         return null;
     }
 
+
     public void deleteEmployee(Long id) {
         employeeRepository.findById(id).orElseThrow(() -> {
             throw new EntityNotFoundException("Employee not found");
         });
         employeeRepository.deleteById(id);
     }
+
+
+
 
 }
 

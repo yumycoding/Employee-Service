@@ -42,8 +42,8 @@ public class EmployeeResource {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping(path = "/del/{id}")
-    public void deleteEmployee(@PathVariable(name = "id") Long id) {
+    @DeleteMapping(path = "/del")
+    public void deleteEmployee(@RequestParam(name = "id") Long id) {
         employeeService.deleteEmployee(id);
     }
 
